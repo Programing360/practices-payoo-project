@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payoo Bank Account</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <!-- login form -->
+    <main class="flex">
+        <div class="mockup-phone">
+            <div class="camera"></div>
+            <div class="display">
+                <div class="artboard artboard-demo phone-3">
+                    <div id="login-form" class="">
+                        <div class="ml-32 mb-3">
+                            <img class="h-20 border-[6px] -z-10 ... rounded-full border-blue-400" src="1234.svg" alt="">
+                        </div>
+                        <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl px-8">
+                            <form class="card-body">
+                                <div class="form-control">
+                                    <label class="label">
+                                        <span class="label-text font-bold">Mobile Number</span>
+                                    </label>
+                                    <input id="input-mob-number" type="text" placeholder="Mobile Number"
+                                        class="input input-bordered rounded-3xl" required />
+                                </div>
+                                <div class="form-control">
+                                    <label class="label">
+                                        <span class="label-text font-bold">4 Digit Pin</span>
+                                    </label>
+                                    <input id="input-pin-number" type="password" placeholder="Enter 4 Digit Pin"
+                                        class="input input-bordered rounded-3xl" required />
+                                    <label class="label">
+                                        <a href="#" class="label-text-alt link link-hover">Forgot password?</a>
+                                    </label>
+                                </div>
+                                <div class="form-control mt-6">
+                                    <button id="input-login"
+                                        class="btn btn-primary rounded-3xl font-bold">Login</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <!-- account form start-->
+                    <div id="home-section" class="bg-white rounded-b-xl pb-5 hidden">
+                        <div class="navbar bg-base-100 bg-white">
+                            <div class="w-10 rounded-full">
+                                <img class="w-[50px]" src="1234.svg" alt="">
+                            </div>
+                            <div class="flex-1 justify-between">
+                                <div>
+                                    <h2 class="text-xl font-bold">$ <span id="current-amount">5000</span></h2>
+                                    <p>Available Balance</p>
+                                </div>
+                                <button class="btn">Log Out</button>
+                            </div>
+                        </div>
+                        <div class="divider"></div>
+                        <div class="mt-8 mb-9 ">
+                            <h1 class="text-2xl font-bold leading-6"> Welcome to Payooo!</h1>
+                            <p class="text-xl leading-6 mt-3 text-[#08080880]">Enjoy easy and convenient financial
+                                services
+                                with us. Cashout charge is low and</p>
+                        </div>
+                        <!-- btn add -->
+                        <div class="grid grid-cols-3 gap-3">
+                            <button id="Money-btn" class="btn flex flex-col px-4 py-5">
+                                <img src="money 1.svg" alt="">
+                                <span class="text-[12px]">Add Money</span>
+                            </button>
+                            <button class="btn flex flex-col">
+                                <img src="send 1.svg" alt="">
+                                <span class="text-[12px]">Cash Out</span>
+                            </button>
+                            <button class="btn flex flex-col">
+                                <img src="purse 1.svg" alt="">
+                                <span class="text-[12px]">Transfer Money</span>
+                            </button>
+                            <button class="btn flex flex-col">
+                                <img src="financial 1.svg" alt="">
+                                <span class="text-[12px]">Get Bonus</span>
+                            </button>
+                            <button class="btn flex flex-col">
+                                <img src="Group.svg" alt="">
+                                <span class="text-[12px]">Pay Bill</span>
+                            </button>
+                            <button class="btn flex flex-col">
+                                <img src="transaction 1.svg" alt="">
+                                <span class="text-[12px]">Transactions</span>
+                            </button>
+                        </div>
+
+                    </div>
+                    <!-- latest update -->
+                    <div id="latest-update" class="hidden">
+                        <div class="navbar bg-base-100 mt-4">
+                            <div class="flex-1">
+                                <img src="Group.svg" alt="">
+                                <a class="btn btn-ghost text-xl">Electrecity Bill</a>
+                                <p></p>
+                            </div>
+                            <div class="flex-none">
+                                <button class="btn btn-square btn-ghost">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                        class="inline-block h-5 w-5 stroke-current">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z">
+                                        </path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="navbar bg-base-100 mt-4">
+                            <div class="flex-1">
+                                <img src="Group.svg" alt="">
+                                <a class="btn btn-ghost text-xl">Electrecity Bill</a>
+                                <p></p>
+                            </div>
+                            <div class="flex-none">
+                                <button class="btn btn-square btn-ghost">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                        class="inline-block h-5 w-5 stroke-current">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z">
+                                        </path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="navbar bg-base-100 mt-4">
+                            <div class="flex-1">
+                                <img src="Group.svg" alt="">
+                                <a class="btn btn-ghost text-xl">Electrecity Bill</a>
+                                <p></p>
+                            </div>
+                            <div class="flex-none">
+                                <button class="btn btn-square btn-ghost">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                        class="inline-block h-5 w-5 stroke-current">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z">
+                                        </path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="navbar bg-base-100 mt-4">
+                            <div class="flex-1">
+                                <img src="Group.svg" alt="">
+                                <a class="btn btn-ghost text-xl">Electrecity Bill</a>
+                                <p></p>
+                            </div>
+                            <div class="flex-none">
+                                <button class="btn btn-square btn-ghost">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                        class="inline-block h-5 w-5 stroke-current">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z">
+                                        </path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- account form end -->
+                    <!-- Add money form start -->
+                    <div id="Add-money-form" class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl mt-3 hidden">
+                        <form class="card-body">
+                            <div class="form-control">
+                                <label class="label">
+                                    <span class="label-text font-bold">Amount to Add</span>
+                                </label>
+                                <input id="get-amount" type="text" placeholder="Add Amount to withdraw" class="input input-bordered" required />
+                            </div>
+                            <div class="form-control">
+                                <label class="label">
+                                    <span class="label-text font-bold">Add pin</span>
+                                </label>
+                                <input id="get-pin-number" type="password" placeholder="Please add your pin" class="input input-bordered" required />
+                                <label class="label">
+                                    <a href="#" class="label-text-alt link link-hover">Forgot password?</a>
+                                </label>
+                            </div>
+                            <div class="form-control mt-6">
+                                <button id="add-money-btn" class="btn btn-primary">Add money</button>
+                            </div>
+                        </form>
+                    </div>
+                    <!-- add money form end -->
+                </div>
+            </div>
+        </div>
+
+    </main>
+    <script src="js/utility.js"></script>
+    <script src="js/login.js"></script>
+</body>
+
+</html>
