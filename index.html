@@ -73,7 +73,7 @@
                                 <img src="money 1.svg" alt="">
                                 <span class="text-[12px]">Add Money</span>
                             </button>
-                            <button class="btn flex flex-col">
+                            <button id="cashout-btn" class="btn flex flex-col">
                                 <img src="send 1.svg" alt="">
                                 <span class="text-[12px]">Cash Out</span>
                             </button>
@@ -192,6 +192,30 @@
                         </form>
                     </div>
                     <!-- add money form end -->
+                     <!-- cash-out form start -->
+                    <div id="cash-out-form" class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl mt-3 hidden">
+                        <form class="card-body">
+                            <div class="form-control">
+                                <label class="label">
+                                    <span class="label-text font-bold">Amount to Add</span>
+                                </label>
+                                <input id="get-amount" type="text" placeholder="Add Amount to withdraw" class="input input-bordered" required />
+                            </div>
+                            <div class="form-control">
+                                <label class="label">
+                                    <span class="label-text font-bold">Add pin</span>
+                                </label>
+                                <input id="get-pin-number" type="password" placeholder="Please add your pin" class="input input-bordered" required />
+                                <label class="label">
+                                    <a href="#" class="label-text-alt link link-hover">Forgot password?</a>
+                                </label>
+                            </div>
+                            <div class="form-control mt-6">
+                                <button id="cash-out-btn" class="btn btn-primary">Cash Out</button>
+                            </div>
+                        </form>
+                    </div>
+                    <!-- cash out form end -->
                 </div>
             </div>
         </div>
