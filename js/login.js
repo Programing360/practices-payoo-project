@@ -31,6 +31,7 @@ document.getElementById('Money-btn')
         addMoneyForm.classList.remove('hidden')
         const latestUpdate = document.getElementById('latest-update')
         latestUpdate.classList.add('hidden')
+        document.getElementById('transfer-money-form').classList.add('hidden')
         document.getElementById('cash-out-form').classList.add('hidden')
     })
 // btn added end----------------------------------------------------
@@ -63,6 +64,7 @@ document.getElementById('cashout-btn')
     .addEventListener('click', function () {
         document.getElementById('Add-money-form').classList.add('hidden')
         document.getElementById('latest-update').classList.add('hidden')
+        document.getElementById('transfer-money-form').classList.add('hidden')
         const getAmount = document.getElementById('cash-out-form')
         getAmount.classList.remove('hidden')
 
@@ -75,20 +77,51 @@ document.getElementById('cash-out-btn')
         const getAmountOfCashOut = document.getElementById('get-amount').value
         parseFloat(getAmountOfCashOut)
         const currentBalance = document.getElementById('current-amount').innerText;
-        if(currentBalance > getAmountOfCashOut){
-            alert('you do not enough money to account!')
-        }
-        if(getPin === '1234'){
-            
+        // if (currentBalance < getAmountOfCashOut) {
+        //     alert('you do not enough money to account!')
+        // }
+        if (getPin === '1234') {
+
 
             const updateBalance = currentBalance - getAmountOfCashOut
 
             document.getElementById('current-amount').innerText = updateBalance
 
         }
+        else {
+            alert('you have some mistake.Please try again!')
+        }
+
+    })
+// cash out btn end---------------------------------------------
+// transfer money btn end---------------------------------------------
+document.getElementById('transfer-money-btn')
+    .addEventListener('click', function () {
+
+        document.getElementById('transfer-money-form').classList.remove('hidden')
+        document.getElementById('Add-money-form').classList.add('hidden')
+        document.getElementById('latest-update').classList.add('hidden')
+        const getAmount = document.getElementById('cash-out-form')
+        getAmount.classList.add('hidden')
+    })
+
+document.getElementById('send-money-btn')
+    .addEventListener('click', function (event){
+        event.preventDefault();
+        const getPin = document.getElementById('get-pin-number-send-money').value;
+        const getAmountSendMoney = document.getElementById('get-amount-send-money').value
+        const sendMoney =  parseFloat(getAmountSendMoney);
+        console.log(typeof sendMoney)
+        const currentBalance = document.getElementById('current-amount').innerText;
+
+        if(getPin === '1234'){
+            const newAmount = currentBalance - sendMoney
+            console.log(newAmount)
+            document.getElementById('current-amount').innerText = newAmount;
+        }
         else{
             alert('you have some mistake.Please try again!')
         }
-        
+
     })
-// cash out btn end---------------------------------------------
+// transfer money btn end---------------------------------------------

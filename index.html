@@ -77,7 +77,7 @@
                                 <img src="send 1.svg" alt="">
                                 <span class="text-[12px]">Cash Out</span>
                             </button>
-                            <button class="btn flex flex-col">
+                            <button id="transfer-money-btn" class="btn flex flex-col">
                                 <img src="purse 1.svg" alt="">
                                 <span class="text-[12px]">Transfer Money</span>
                             </button>
@@ -89,7 +89,7 @@
                                 <img src="Group.svg" alt="">
                                 <span class="text-[12px]">Pay Bill</span>
                             </button>
-                            <button class="btn flex flex-col">
+                            <button id="transaction-btn" class="btn flex flex-col">
                                 <img src="transaction 1.svg" alt="">
                                 <span class="text-[12px]">Transactions</span>
                             </button>
@@ -175,13 +175,15 @@
                                 <label class="label">
                                     <span class="label-text font-bold">Amount to Add</span>
                                 </label>
-                                <input id="get-amount" type="text" placeholder="Add Amount to withdraw" class="input input-bordered" required />
+                                <input id="get-amount" type="text" placeholder="Add Amount to withdraw"
+                                    class="input input-bordered" required />
                             </div>
                             <div class="form-control">
                                 <label class="label">
                                     <span class="label-text font-bold">Add pin</span>
                                 </label>
-                                <input id="get-pin-number" type="password" placeholder="Please add your pin" class="input input-bordered" required />
+                                <input id="get-pin-number" type="password" placeholder="Please add your pin"
+                                    class="input input-bordered" required />
                                 <label class="label">
                                     <a href="#" class="label-text-alt link link-hover">Forgot password?</a>
                                 </label>
@@ -192,20 +194,22 @@
                         </form>
                     </div>
                     <!-- add money form end -->
-                     <!-- cash-out form start -->
+                    <!-- cash-out form start -->
                     <div id="cash-out-form" class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl mt-3 hidden">
                         <form class="card-body">
                             <div class="form-control">
                                 <label class="label">
                                     <span class="label-text font-bold">Amount to Add</span>
                                 </label>
-                                <input id="get-amount" type="text" placeholder="Add Amount to withdraw" class="input input-bordered" required />
+                                <input id="get-amount" type="text" placeholder="Add Amount to withdraw"
+                                    class="input input-bordered" required />
                             </div>
                             <div class="form-control">
                                 <label class="label">
                                     <span class="label-text font-bold">Add pin</span>
                                 </label>
-                                <input id="get-pin-number" type="password" placeholder="Please add your pin" class="input input-bordered" required />
+                                <input id="get-pin-number" type="password" placeholder="Please add your pin"
+                                    class="input input-bordered" required />
                                 <label class="label">
                                     <a href="#" class="label-text-alt link link-hover">Forgot password?</a>
                                 </label>
@@ -216,6 +220,32 @@
                         </form>
                     </div>
                     <!-- cash out form end -->
+                     <!-- transfer money form start -->
+                    <div id="transfer-money-form" class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl mt-3 hidden">
+                        <form class="card-body">
+                            <div class="form-control">
+                                <label class="label">
+                                    <span class="label-text font-bold">Amount to Add</span>
+                                </label>
+                                <input id="get-amount-send-money" type="text" placeholder="Add Amount to withdraw"
+                                    class="input input-bordered" required />
+                            </div>
+                            <div class="form-control">
+                                <label class="label">
+                                    <span class="label-text font-bold">Add pin</span>
+                                </label>
+                                <input id="get-pin-number-send-money" type="password" placeholder="Please add your pin"
+                                    class="input input-bordered" required />
+                                <label class="label">
+                                    <a href="#" class="label-text-alt link link-hover">Forgot password?</a>
+                                </label>
+                            </div>
+                            <div class="form-control mt-6">
+                                <button id="send-money-btn" class="btn btn-primary">send Money</button>
+                            </div>
+                        </form>
+                    </div>
+                    <!-- transfer money form end -->
                 </div>
             </div>
         </div>
